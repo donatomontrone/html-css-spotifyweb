@@ -10,6 +10,14 @@
     display: flex;
 }
 
+.column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
 .wrap {
     flex-wrap: wrap;
 }
@@ -23,7 +31,9 @@ header {
     overflow: hidden;
     background-color: black;
     height: calc(100vh - 80px);
+    color: white;
 }
+
 
 main {
     width: calc(100% - 230px);
@@ -32,6 +42,29 @@ main {
     background-color: #141922;
 }
 
+section.upgrade {
+    text-align: right;
+    height: 80px;
+    background-color: #080B11;
+}
+
+section.music-button {
+    text-align: center;
+}
+section.music-button ul{
+    list-style: none;
+}
+
+section.music-button li{
+    display: inline-block;
+}
+
+div.test {
+    height: 150px;
+    width: 150px;
+    background-color: red;
+
+}
 footer {
     height: 80px;
     position: fixed;
@@ -60,5 +93,11 @@ footer {
 
     main {
         width: calc(100% - 60px);
+    }
+
+    header span,
+    header h4,
+    header ul.playlist {
+        display: none;
     }
 }
