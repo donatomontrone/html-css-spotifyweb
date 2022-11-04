@@ -38,3 +38,27 @@ footer {
     background-color: #282828;
     width: 100vw;
 }
+
+
+/* MEDIA QUERY */
+
+/* Dimesioni medium */
+
+@media screen and (max-width: 992px) {
+    
+}
+
+/* Dimesione small */
+@media screen and (max-width: 768px){
+    
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        width: 60px;
+    }
+
+    main {
+        width: calc(100% - 60px);
+    }
+}
