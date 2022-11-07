@@ -32,6 +32,9 @@
     justify-content: space-between;
 }
 
+body{
+    font-family: 'Signika', sans-serif;
+}
 header {
     width: 230px;
     overflow: hidden;
@@ -516,7 +519,17 @@ footer section.player div.duration-bar:hover i.fa-circle{
     header ul.playlist,
     hr,
     section.account a.download-app span,
-    section.account a.profile-name {
+    section.account a.profile-name,
+    footer .now-description p,
+    footer .now-button {
         display: none;
+    }
+
+    footer section.sound i.fa-solid {
+        padding: 0 .2rem;
+    }
+
+    footer i {
+        font-size: .7rem;
     }
 }
