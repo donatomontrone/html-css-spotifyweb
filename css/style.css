@@ -30,13 +30,12 @@ header {
     width: 230px;
     overflow: hidden;
     background-color: black;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 90px);
 }
-
 
 main {
     width: calc(100% - 230px);
-    height:calc(100vh - 60px);
+    height:calc(100vh - 90px);
     overflow-y: auto;
     background-color: #141922;
 }
@@ -187,7 +186,8 @@ section.popular p,
 div.disk-card p.artist,
 nav.music-search ul.search li span,
 nav.music-search ul.playlist li,
-section.account a {
+section.account a,
+footer div.now-description p {
     font-weight: bold;
 }
 
@@ -221,7 +221,9 @@ section.popular p,
 section.created-for p,
 div.disk-card p.artist,
 nav.music-search ul li,
-section.account a {
+section.account a,
+footer div.now-description p,
+footer div.now-button i {
     color: var(--sub-color);
 }
 
@@ -296,9 +298,131 @@ div.disk-card div.rounded{
 }
 
 footer {
-    height: 60px;
+    height: 90px;
     background-color: #282828;
+    align-items: center;
+    color: var(--main-color);
 }
+
+footer section.now-listening,
+footer section.sound {
+    width: 25%;
+}
+
+footer section.player {
+    width: 45%;
+    text-align: center;
+}
+
+footer section.sound {
+    justify-content: end;
+}
+
+
+footer div.now-cover {
+    margin-right: .5rem;
+}
+
+footer div.now-description{
+    margin-right: 2rem;
+}
+
+footer div.now-cover img{
+    object-fit: contain;
+    height: 60px;
+    width: 60px;
+    padding: .4rem;
+}
+
+footer div.now-description,
+footer div.now-button {
+    align-self: center;
+}
+
+footer div.now-description h4{
+    font-size: .9rem;
+}
+
+footer div.now-description p{
+    font-size: .7rem;
+}
+
+section.player div.player-buttons {
+    margin-bottom: 1rem;
+}
+
+section.player div.player-buttons i,
+section.sound > i{
+    vertical-align: middle;
+    padding: 0 .7rem;
+}
+
+
+section.player div.duration p {
+    font-size: .8rem;
+    vertical-align: middle;
+}
+
+section.player div.duration-bar {
+    width: 80%;
+    align-items: center;
+}
+
+footer div.spent,
+footer div.remaining {
+    height: 4px;
+}
+
+footer div.spent {
+    width: 25%;
+    background-color: lightgrey;
+    border-radius: 4px;
+    position: relative;
+}
+
+footer i.fa-circle {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-10%, -50%);
+}
+
+footer div.remaining {
+    width: 75%;
+    background-color: grey;
+    border-radius: 0 4px 4px 0;
+}
+
+section.sound div.volume{
+    width: 70%;
+    align-items: center;
+    padding-right: .3rem;
+}
+
+footer div.now-description p:hover{
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+footer div.now-button i:hover {
+    color: var(--main-color);
+}
+
+footer div.player-buttons i.fa-circle-play:hover{
+    transform: scale(1.2);
+}
+
+footer section.sound div.volume:hover div.spent,
+footer section.player div.duration-bar:hover div.spent{
+    background-color: #AAF545;
+}
+
+footer section.sound div.volume:hover i.fa-circle,
+footer section.player div.duration-bar:hover i.fa-circle{
+    display: inline;
+}
+
 
 /* MEDIA QUERY */
 
