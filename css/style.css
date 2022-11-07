@@ -10,8 +10,14 @@
     --main-color: white;
     --sub-color: #797C80;
 }
+
 .flex {
     display: flex;
+}
+
+.centered {
+    justify-content: center;
+    align-items: center;
 }
 
 .column {
@@ -97,6 +103,10 @@ nav.music-search img{
 nav.music-search  ul.playlist span{
     padding-left: .6rem;
     font-size: .9rem;
+}
+
+section.account {
+    margin-bottom: 1rem;
 }
 
 nav.music-search ul.playlist li:hover,
@@ -216,6 +226,10 @@ section.music-button ul li a:hover{
     color: var(--main-color);
 }
 
+section.account figure img:hover {
+    filter: invert(1);
+}
+
 section.music-button ul li a,
 section.popular p,
 section.created-for p,
@@ -306,7 +320,7 @@ footer {
 
 footer section.now-listening,
 footer section.sound {
-    width: 25%;
+    width: 20%;
 }
 
 footer section.player {
@@ -364,8 +378,9 @@ section.player div.duration p {
 }
 
 section.player div.duration-bar {
-    width: 80%;
+    width: 60%;
     align-items: center;
+    padding: 0 1rem;
 }
 
 footer div.spent,
@@ -395,7 +410,7 @@ footer div.remaining {
 }
 
 section.sound div.volume{
-    width: 70%;
+    width: 30%;
     align-items: center;
     padding-right: .3rem;
 }
@@ -428,7 +443,7 @@ footer section.player div.duration-bar:hover i.fa-circle{
 
 /* Dimesioni medium */
 
-@media screen and (max-width: 878px) {
+@media screen and (max-width: 992px) {
     div.disk-card {
         width: calc((100% / 4) - 1.4rem);
     }
@@ -438,7 +453,7 @@ footer section.player div.duration-bar:hover i.fa-circle{
 }
 
 /* Dimesione small */
-@media screen and (max-width: 639px){
+@media screen and (max-width: 768px){
     div.disk-card {
         width: calc((100% / 2) - 1.4rem);
     }
@@ -474,13 +489,15 @@ footer section.player div.duration-bar:hover i.fa-circle{
         padding-left: 0;
     }
 
-    nav.music-search ul.search li:hover{
-        padding: 0;
-    }
 
     section.account {
         text-align: center;
     }
+
+    section.account figure{
+        margin: .7rem 0 0 0;
+    }
+    
     section.account a.download-app {
         margin: 0;
     }
@@ -490,10 +507,6 @@ footer section.player div.duration-bar:hover i.fa-circle{
     }
 
 
-    section.account figure {
-        margin: 1.5rem 0 1.5rem 0;
-    }
-
     main {
         width: calc(100% - 40px);
     }
@@ -501,8 +514,8 @@ footer section.player div.duration-bar:hover i.fa-circle{
     header span,
     header h4,
     header ul.playlist,
-    section.account a.download-app span,
     hr,
+    section.account a.download-app span,
     section.account a.profile-name {
         display: none;
     }
