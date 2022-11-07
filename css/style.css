@@ -37,7 +37,7 @@ header {
 main {
     width: calc(100% - 230px);
     height:calc(100vh - 60px);
-    overflow: scroll;
+    overflow-y: auto;
     background-color: #141922;
 }
 
@@ -50,24 +50,32 @@ div.main-logo img.small-logo {
     display: none;
 }
 
-nav.music-search ul.search li,
 nav.music-search ul.playlist {
     padding:  0 0 .5rem 1rem;
 }
 
 nav.music-search img {
-    width: 26px;
-    vertical-align: middle;
+    width: 50px;
+    padding-left: 1.3rem;
 }
+
+nav.music-search ul.search li:hover{
+    border-left: 2px #AAF545 solid;
+    color: var(--main-color);
+}
+
 
 nav.music-search  ul.playlist {
     list-style: none;
 }
 
-nav.music-search  ul.playlist li {
+nav.music-search  ul.playlist li{
     padding-bottom: 1rem;
 }
 
+nav.music-search  ul.search li{
+    padding-bottom: .5rem;
+}
 
 nav.music-search  ul.playlist li,
 nav.music-search ul.search span {
@@ -76,19 +84,25 @@ nav.music-search ul.search span {
 }
 
 nav.music-search h4 {
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem 0 1rem 1.3rem;
     font-size: .9rem;
 }
 
 nav.music-search ul.search span,
 nav.music-search  ul.playlist span,
-nav.music-search  ul.playlist i{
+nav.music-search  ul.playlist i,
+nav.music-search img{
     vertical-align: middle;
 }
 
 nav.music-search  ul.playlist span{
     padding-left: .6rem;
     font-size: .9rem;
+}
+
+nav.music-search ul.playlist li:hover,
+section.account a:hover {
+    color: var(--main-color);
 }
 
 section.account a.download-app {
@@ -129,13 +143,13 @@ section.account a.profile-name{
 
 main,
 header,
-section.upgrade a,
+section.upgrade button,
 section.account a.profile-name{
     color: var(--main-color);
 }
 
 nav.music-search h4,
-section.upgrade,
+section.upgrade button,
 section.music-button {
     text-transform: uppercase;
 }
@@ -144,24 +158,29 @@ section.upgrade {
     height: 90px;
     text-align: right;
     background-color: #080B12;
-    padding-top: 2.2rem;
 }
 
-section.upgrade a {
+section.upgrade button {
     border: 1px solid var(--main-color);
     border-radius: 30px;
     padding: .8rem 2.5rem;
-    margin: 2rem;
+    margin: 1.5rem;
+    background-color: #080B12;
 }
 
-section.upgrade a,
+section.upgrade button:hover {
+    transform: scale(1.1);
+}
+
+
+section.upgrade button,
 section.music-button ul li a,
 section.account a  {
     text-decoration: none;
     font-size: .8rem;
 }
 
-section.upgrade a,
+section.upgrade button,
 section.music-button ul li a,
 section.created-for p,
 section.popular p,
@@ -188,7 +207,13 @@ section.music-button li{
 }
 
 section.music-button ul li a{
-    padding: .8rem;
+    margin: 1rem .8rem 0 .8rem;
+}
+
+section.music-button ul li a:hover{
+    border-bottom: 2px #AAF545 solid;
+    border-image: linear-gradient(to right, #141922 25%, #AAF545 50%, #141922 75%) 100% 1;
+    color: var(--main-color);
 }
 
 section.music-button ul li a,
@@ -223,11 +248,38 @@ section.popular p{
 }
 
 div.disk-card {
-    margin-left: 1rem;
-    width: 180px;
+    margin:0 .7rem;
+    width: calc((100% / 6) - 1.4rem);
     text-align: center;
     padding-bottom: 1rem;
 }
+
+div.disk-cover {
+    position: relative;
+}
+
+div.disk-cover i{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    font-size: 2rem;
+    display: none;
+}
+
+div.disk-card img{
+    max-width: 100%;
+}
+
+div.disk-card:hover img {
+    filter: opacity(50%);
+    transition: all 5ms ease-in-out;
+}
+
+div.disk-card:hover i {
+    display: inline;
+}
+
 
 div.disk-card h3.song {
     margin: 1rem 0 .5rem 0;
@@ -238,8 +290,9 @@ div.disk-card p.artist {
     font-size: .8rem;
 }
 
-img{
-    width: 100%;
+div.disk-card div.rounded{
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 footer {
@@ -253,14 +306,17 @@ footer {
 
 @media screen and (max-width: 878px) {
     div.disk-card {
-        width: 140px;
+        width: calc((100% / 4) - 1.4rem);
+    }
+    section.music-button ul li {
+        padding-bottom: 2rem;
     }
 }
 
 /* Dimesione small */
 @media screen and (max-width: 639px){
     div.disk-card {
-        width: 180px;
+        width: calc((100% / 2) - 1.4rem);
     }
 
     section.music-button ul {
@@ -290,10 +346,11 @@ footer {
     }
 
     nav.music-search img {
-        width: 65%;
+        width: 26px;
+        padding-left: 0;
     }
 
-    nav.music-search ul.search li {
+    nav.music-search ul.search li:hover{
         padding: 0;
     }
 
@@ -315,10 +372,6 @@ footer {
 
     main {
         width: calc(100% - 40px);
-    }
-
-    div.disk-card {
-        width: 230px;
     }
 
     header span,
