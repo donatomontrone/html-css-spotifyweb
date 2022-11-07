@@ -318,6 +318,7 @@ footer {
     height: 90px;
     background-color: #282828;
     align-items: center;
+    padding: 0 1rem;
     color: var(--main-color);
 }
 
@@ -512,6 +513,9 @@ footer section.player div.duration-bar:hover i.fa-circle{
 
     main {
         width: calc(100% - 40px);
+    }
+    footer{
+    padding: 0 .3rem;
     }
 
     header span,
