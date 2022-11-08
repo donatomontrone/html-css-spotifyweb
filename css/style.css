@@ -45,8 +45,13 @@ header {
 main {
     width: calc(100% - 230px);
     height:calc(100vh - 90px);
-    overflow-y: auto;
     background-color: #141922;
+}
+
+div.main-content{
+    width: 100%;
+    height:calc(100vh - 180px);
+    overflow-y: auto;
 }
 
 div.main-logo img.big-logo {
