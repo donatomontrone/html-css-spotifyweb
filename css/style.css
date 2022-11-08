@@ -33,11 +33,11 @@
 }
 
 body{
-    font-family: 'Signika', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 header {
     width: 230px;
-    overflow: hidden;
+    overflow: auto;
     background-color: black;
     height: calc(100vh - 90px);
 }
@@ -514,6 +514,8 @@ footer section.player div.duration-bar:hover i.fa-circle{
     main {
         width: calc(100% - 40px);
     }
+
+
     footer{
     padding: 0 .3rem;
     }
@@ -524,9 +526,39 @@ footer section.player div.duration-bar:hover i.fa-circle{
     hr,
     section.account a.download-app span,
     section.account a.profile-name,
+    footer .now-button,
     footer .now-description p,
-    footer .now-button {
+    footer i.fa-shuffle,
+    footer i.fa-rotate-right,
+    footer i.fa-list,
+    footer i.fa-display {
         display: none;
+    }
+
+    footer section.now-listening{
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    footer div.now-cover {
+        margin-right: 0;
+    }
+
+    footer div.now-description {
+        margin-right: 0
+    }
+
+    footer section.sound {
+        justify-content: center;
+    }
+
+    footer i.fa-volume-high {
+        width: 30%;
+    }
+
+    footer section.sound div.volume {
+        width: 60%;
     }
 
     footer section.sound i.fa-solid {
